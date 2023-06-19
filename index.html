@@ -1,1 +1,166 @@
-# difm-conf.github.io
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FIDM 2023 - First Workshop for Distributed infrastructures for foundation models</title>
+  <meta name="description" content="Distributed Deep Learning">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+   <link href="blog.css" rel="stylesheet">
+
+   <!--
+  <style>
+	table, th, td { border: 1px solid black; }
+  </style>
+  -->
+
+</head>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16788810-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<body>
+
+      <div class="container" style="max-width:900px  !important;">
+        <div style="max-width:940px  !important;">
+          <p align='center'>
+    <a href="https://middleware-conf.github.io/2023/"><img src="header.png" align='center' style="width:825px; height:250px"></img></a>
+  </p>
+      </div>
+    </div>
+
+
+    <div class="container" style="max-width:900px  !important;">
+
+      <div class="blog-header">
+        <h1 class="blog-title">First Workshop on Distributed infrastructures for foundation models (DIFM) 2023</h1>
+        <p class="lead blog-description">Middleware 2023 Workshops</p>
+        <p class="blog-description"> </p>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 blog-main">
+     <div class="blog-post">
+
+<p align="justify">
+The DIFM workshop is co-located with <a href="https://middleware-conf.github.io/2023/">ACM/IFIP Middleware 2023</a>, which takes place from December 11-15 in Bologna, Italy.
+
+<p align="justify">
+Following the innovations in deep learning, foundation models (FM) are the next evolution in machine learning. <a href="https://arxiv.org/abs/2108.07258">Foundation models</a>, including large language models, are driving the recent breakthroughs around conversational AI chatbots (such as <a href="https://en.wikipedia.org/wiki/ChatGPT">ChatGPT</a>), image generation (such as <a href="https://en.wikipedia.org/wiki/Stable_Diffusion">Stable Diffusion</a>), and code assistants (such as <a href="https://en.wikipedia.org/wiki/GitHub_Copilot">GitHub CoPilot</a>).
+<p align="justify">
+  Foundation models across text, speech, and vision domains can be trained at scale using self-supervision techniques and applied to a broad set of downstream tasks. They address a limitation of deep learning models which typically required large task-specific labeled datasets. There is tremendous activity in this space from large enterprises, such as <a href="google.com">Google</a>, <a href="microsoft.com">Microsoft</a>, <a href="amazon.com">Amazon</a>, and <a href="IBM.com">IBM</a>; and startups, such as <a href="https://en.wikipedia.org/wiki/OpenAI">OpenAI</a>,<a href="https://en.wikipedia.org/wiki/Anthropic">Anthropic</a>, Stability AI, and <a href="https://en.wikipedia.org/wiki/Cohere">Cohere</a>. As well there have been a flurry of papers in this space from academia and the open source community, resulting in models such as <a href="https://crfm.stanford.edu/2023/03/13/alpaca.html">Alpaca</a>, and efforts such as <a href="https://en.wikipedia.org/wiki/OpenAssistant">OpenAssistant.</a>
+<p align="justify">
+  Much of the attention has been on the models and datasets, with academic communities relying on the training and serving infrastructure provided by large cloud providers. Innovations on the infrastructure aspects have largely been taking place in closed enterprises and startups. This workshop will serve as a venue for academics and practitioners to share their findings, visions, and ideas around these infrastructure challenges and concerns. There are still challenging open problems that need attention. One piece of evidence of these challenges is OpenAI’s <a href="https://arxiv.org/abs/2303.08774">GPT-4 technical report</a>. While this report is light on technical details, it includes an extensive Acknowledgements section that listed large dedicated teams focused on infrastructure aspects such as “Compute cluster scaling”, “Distributed training infrastructure”, “Hardware correctness”, “Training run babysitting”, “Deployment & post-training”, “Data infrastructure”, “Acceleration forecasting”, “Inference research”, “Inference infrastructure”, and “Reliability engineering”. This suggests the importance of middleware infrastructure to train and serve FMs, and the need for research in this space.
+
+<p align="justify">
+  The scope of this workshop includes, but is not limited to:
+  <ol>
+    <li>Resource scheduling algorithms and optimizations for FM serving workloads, including batch, streaming, and synchronous invocation patterns.</li>
+    <li>Novel techniques to train large FMs.</li>
+    <li>Frameworks for fine-tuning FMs.</li>
+    <li>Programming model abstractions for FMs (such as <a href="https://en.wikipedia.org/wiki/LangChain">LangChain</a>).</li>
+    <li>Case studies of FM middleware.</li>
+    <li>Novel debugging and logging techniques, both in cases of black-box FMs available through an API, and locally available FMs.</li>
+    <li>Deployment of FMs in resource constrained environments (such as edge platforms, web browsers, and mobile devices).</li>
+  </ol>
+
+
+
+
+
+<p align="justify">
+  <h2>Dates and location</h2>
+
+  Paper submissions: September 25, 2023<br>
+  Notification to authors: October 20, 2023<br>
+  Camera-ready copy due: October 27, 2023<br><br>
+
+  <h2>Papers and Submissions</h2>
+         We are looking for the following types of submissions:<br>
+         <p align="justify">
+  <ul>
+  <li>Research and industry papers (up to 8 pages): Reports on original results including novel techniques, significant case studies or surveys. Authors may include extra material beyond the six pages as a clearly marked appendix, which reviewers are not obliged to read but could read.  </li>
+  <li>Position papers (up to 4 pages): Reports identifying unaddressed problems and research challenges.</li>
+  <li>Abstracts (up to 1 page): An extended abstract on a preliminary or ongoing work.</li>
+
+         </ul>
+  <p align="justify">
+    Papers must be written in English and submitted in PDF format. All papers should follow ACM formatting instructions, specifically the ACM SIG Proceedings Standard Style. The author kit containing the templates for the required style can be found at <a href="http://www.acm.org/publications/proceedings-template">http://www.acm.org/publications/proceedings-template</a>.
+    <p align="justify">
+    Submissions should not be blinded for review. Please submit your papers via the submission site: <a href=""></a>
+   <p align="justify">
+  All accepted papers will appear in the Middleware 2023 companion proceedings, available in the ACM Digital Library. All accepted papers will also be presented at the workshop, and at least one author of each paper must register for the workshop.
+
+
+
+  <h2>
+    Workshop Co-chairs
+  </h2>
+
+  <p>
+    Bishwaranjan Bhattacharjee, IBM Research<br/>
+    Vatche Isahagian, IBM Research<br/>
+    Vinod Muthusamy, IBM Research<br/>
+  </p>
+
+  <h2>
+    Program Committee (Tentative)
+  </h2>
+
+  <p>
+    Parag Chandakkar, Walmart Labs <br/>
+    Ian Foster, Argonne National Laboratory and the University of Chicago <br/>
+    Matthew Hill, Dataminr <br/>
+    Mayoore Jaiswal, Nvidia <br/>
+    Gauri Joshi, Carnegie Mellon University<br/>
+    Jayaram K. R., IBM Research<br/>
+    Ruben Mayer, Technical University of Munich<br/>
+    Pietro Michiardi, Eurecom<br/>
+    Phuong Nguyen, eBay <br/>
+    Peter Pietzuch, Imperial College<br/>
+    Chuan Wu, University of Hong Kong<br/>
+  </p>
+
+
+         <p>
+    &nbsp;
+  </p>
+         <p>
+    &nbsp;
+  </p>
+
+
+
+          </div><!-- /.blog-post -->
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+</body>
+
+</html>
